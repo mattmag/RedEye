@@ -1,0 +1,322 @@
+
+{
+    "name": "RedEye",
+    "variables":
+    {
+        // amber
+        "basically_white": "hsl(43, 100%, 75%)",
+        "amber": "hsl(43, 100%, 50%)",
+        "almost_amber": "hsl(35, 100%, 50%)",
+        "bright_amber": "hsl(42, 87%, 65%)",
+        "muted_amber": "hsla(37, 80%, 30%, 0.7)",
+        "muted_white": "color(var(basically_white) a(0.25))",
+        // orange
+        "orange": "hsl(25, 100%, 50%)",
+        "bright_orange": "hsl(30, 80%, 58%)",
+        // red
+        "red": "hsl(3, 100%, 56%)",
+        "bright_red": "color(var(red) s(- 10%) l(+ 10%) a(0.8)",
+        "dark_red": "hsl(10, 100%, 33%)",
+        "muted_dark_red": "color(var(dark_red) s(- 78%) l(- 1%))",
+        "other_muted_dark_red": "color(var(dark_red) s(- 70%) l(- 1%))",
+        // brown
+        "brown": "hsl(24, 100%, 25%)",
+        "muted_brown": "color(var(brown) l(+ 6%) s(- 60%) a(0.7))",
+        "dark_brown": "hsl(24, 40%, 11.5%)",
+        "super_dark_brown": "hsl(24, 35%, 10%)",
+        // grey
+        "unknown_grey": "color(var(amber) s(-80%) l(- 15%))",
+        // purple
+        "bright_purple": "color(var(purple) s(- 50%) l(+ 25%))",
+        "purple": "hsl(268, 100%, 30%)",
+        "dark_purple": "hsl(291, 30%, 14%)",
+        "super_dark_purple": "hsl(291, 30%, 9%)",
+        // pink
+        "pink": "hsl(312, 100%, 49%)",
+        "dark_pink": "color(var(pink) l(- 10%))",
+        "bright_pink": "color(var(pink) s(- 50%) l(+ 10%))",
+        "muted_pink": "color(var(pink) s(- 80%) l(- 5%) a(0.6))",
+        // green
+        "green": "hsl(125, 100%, 50%)",
+        "dark_green": "color(var(green) s(- 40%) l(- 15%)",
+        "bright_green": "color(var(green) s(- 20%) l(+ 15%))",
+        // blue
+        "blue": "hsl(200, 80%, 38%)",
+        "bright_blue": "hsl(200, 100%, 50%)",
+    },
+    "globals":
+    {
+        // general
+        "background": "var(super_dark_brown)",
+        "foreground": "var(bright_amber)",
+        "invisibles": "color(var(muted_amber) a(0.4))",
+        "mispelling": "var(red)",
+
+        // carets and selections
+        "caret": "var(bright_blue)",
+        "selection": "var(dark_purple)",
+        "selection_border": "var(muted_pink)",
+        "line_highlight": "color(var(super_dark_brown) l(+ 1.5%))",
+        "highlight": "color(var(unknown_grey) a(1))",
+        "find_highlight": "color(var(unknown_grey) a(1))",
+        
+        // brackets
+        "brackets_options": "foreground",
+        "brackets_foreground": "var(bright_blue)",
+        "bracket_contents_options": "underline",
+        "bracket_contents_foreground": "var(bright_blue)"
+    },
+    "rules":
+    [
+        // Comments
+        {
+            "name": "Comment",
+            "scope": "comment",
+            "foreground": "var(muted_dark_red)",
+            "font_style": "italic",
+        },
+        {
+            "name": "XML Comment Tag",
+            "scope": "comment.block.documentation entity.name.tag",
+            "foreground": "var(muted_amber)",
+            "font_style": "italic",
+        },
+        {
+            "name": "XML Comment Tag Brackets",
+            "scope": "comment.block.documentation punctuation.definition.tag",
+            "foreground": "var(muted_brown)",
+            "font_style": "italic",
+        },
+        {
+            "name": "XML Comment Attribute",
+            "scope": "comment.block.documentation entity.other.attribute-name",
+            "foreground": "var(muted_brown)",
+            "font_style": "italic",
+        },
+        {
+            "name": "XML Comment String",
+            "scope": "comment.block.documentation string.quoted",
+            "foreground": "var(muted_pink)",
+            "font_style": "italic",
+        },
+
+        // Preprocessor
+        {
+            "name": "Preprocessor",
+            "scope": "keyword.other.preprocessor, keyword.control.preprocessor, constant.other.flag",
+            "foreground": "var(unknown_grey)"
+        },
+        {
+            "name": "Preprocessor Comments",
+            "scope": "string.unquoted, entity.name.section",
+            "foreground": "var(unknown_grey)",
+        },
+
+        // Rust Foreground - because variables etc don't get their own scope
+        {
+            "name": "Rust Foreground",
+            "scope": "source.rust",
+            "foreground": "var(basically_white)"
+        },
+
+        // Definitions
+        {
+            "name": "Access Modifier",
+            "scope": "storage.modifier, storage.modifier.access",
+            "foreground": "var(amber)",
+            // "font_style": "italic",
+        },
+        {
+            "name": "Attribute",
+            "scope": "variable.annotation",
+            "foreground": "var(green)",
+        },
+        {
+            "name": "Rust Annotation",
+            "scope": "punctuation.definition.annotation.rust",
+            "foreground": "var(green)",
+        },
+
+
+        // Class Definitions
+        {
+            "name": "Class Names",
+            "scope": "entity.name.class, entity.name.struct, entity.name.enum",
+            "foreground": "var(green)",
+        },
+
+        {
+            "name": "Class Storage Type",
+            "scope": "storage.type.class, storage.type.struct, storage.type.enum",
+            "foreground": "var(dark_green)",
+        },
+        {
+            "name": "Inherited Types",
+            "scope": "entity.other.inherited-class",
+            "foreground": "var(bright_green)",
+        },
+        {
+            "name": "Inherited Type Separator",
+            "scope": "punctuation.separator.inherited-class",
+            "foreground": "var(bright_green)",
+        },
+        {
+            "name": "Rust Implement Struct Name",
+            "scope": "entity.name.impl.rust",
+            "foreground": "var(green)",
+        },
+        {
+            "name": "Rust Implement",
+            "scope": "storage.type.impl.rust",
+            "foreground": "var(bright_purple)",
+        },
+
+        // Methods Definitions
+        {
+            "name": "Method Names",
+            "scope": "entity.name.function",
+            "foreground": "var(pink)",
+        },
+        {
+            "name": "Parameter Names",
+            "scope": "variable.parameter",
+            "foreground": "var(bright_pink)",
+        },
+
+        // Types
+        {
+            "name": "Storage Type",
+            "scope": "storage.type",
+            "foreground": "var(bright_amber)",
+        },
+        {
+            "name": "Support Type",
+            "scope": "support.type",
+            "foreground": "var(bright_amber)",
+        },
+        {
+            "name": "Rust Let",
+            "scope": "storage.type.rust",
+            "foreground": "var(almost_amber)",
+        },
+        {
+            "name": "Rust Support Type",
+            "scope": "support.type.rust",
+            "foreground": "var(almost_amber)"
+        },
+
+        // Variables
+        {
+            "name": "Variable",
+            "scope": "variable",
+            "foreground": "var(basically_white)",
+        },
+
+        // Function Calls
+        {
+            "name": "Function Call",
+            "scope": "variable.function",
+            "foreground": "var(amber)",
+        },
+
+        // Keywords, Punctuation
+        {
+            "name": "Control",
+            "scope": "keyword.control",
+            "foreground": "var(almost_amber)"
+        },
+        {
+            "name": "Rust Keywords (use)",
+            "scope": "keyword.other.rust",
+            "foreground": "var(almost_amber)"
+        },
+        {
+            "name": "Rust Mod",
+            "scope": "storage.type.module.rust",
+            "foreground": "var(almost_amber)"
+        },
+        {
+            "name": "This",
+            "scope": "variable.language",
+            "foreground": "var(bright_orange)"
+        },
+        {
+            "name": "Operators",
+            "scope": "keyword.operator",
+            "foreground": "var(bright_orange)",
+        },
+        {
+            "name": "Rust Colon Separator",
+            "scope": "punctuation.separator.rust",
+            "foreground": "var(bright_orange)",
+        },
+        {
+            "name": "New",
+            "scope": "keyword.operator.new",
+            "foreground": "var(almost_amber)",
+        },
+        {
+            "name": "Generic Type Brackets",
+            "scope": "punctuation.definition.generic",
+            "foreground": "var(bright_orange)",
+        },
+        {
+            "name": "Rust Accessor",
+            "scope": "punctuation.accessor.rust",
+            "foreground": "var(bright_orange)",
+        },
+        {
+            "name": "Rust Braces, Brackets, and Parenthesis",
+            "scope": "source.rust punctuation.section, source.rust punctuation.section.block",
+            "foreground": "var(bright_amber)",
+        },
+
+        // Numbers
+        {
+            "name": "Numbers",
+            "scope": "constant.numeric",
+            "foreground": "var(red)",
+        },
+        {
+            "name": "Numbers",
+            "scope": "storage.type.numeric",
+            "foreground": "color(var(red) a(0.6))",
+        },
+
+        // Strings
+        {
+            "name": "Strings",
+            "scope": "string.quoted",
+            "foreground": "var(bright_red)",
+        },
+
+        // JSON
+        {
+            "name": "Keys",
+            "scope": "meta.mapping.key.json string.quoted",
+            "foreground": "var(amber)",
+        },
+        {
+            "name": "Values",
+            "scope": "meta.mapping.value.json string.quoted",
+            "foreground": "var(basically_white)",
+        },
+
+        // XML
+        {
+            "name": "Tag Brackets",
+            "scope": "punctuation.definition.tag",
+            "foreground": "var(bright_orange)"
+        },
+        {
+            "name": "Tag Name",
+            "scope": "entity.name.tag.localname",
+            "foreground": "var(bright_amber)"
+        },
+        {
+            "name": "Attributes",
+            "scope": "entity.other.attribute-name",
+            "foreground": "var(basically_white)"
+        },
+    ]
+}

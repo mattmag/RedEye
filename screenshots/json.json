@@ -1,0 +1,6 @@
+// Class Definitions
+{
+    "name": "Class Names",
+    "scope": "entity.name.class, entity.name.struct",
+    "foreground": "var(green)",
+},

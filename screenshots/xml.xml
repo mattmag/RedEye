@@ -1,0 +1,10 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<xmlexample>
+    <tag1 attribute="someValue"/>
+    <tag2>
+        <child>value</child>
+        <child>value</child>
+    </tag2>
+</xmlexample>
+
