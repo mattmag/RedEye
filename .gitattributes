@@ -1,2 +1,1 @@
-* linguist-vendored
-screenshots/** export-ignore
+screenshots/** export-ignore linguist-vendored
