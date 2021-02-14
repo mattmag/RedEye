@@ -12,6 +12,7 @@
         "muted_white": "color(var(basically_white) a(0.25))",
         // orange
         "orange": "hsl(25, 100%, 50%)",
+        "almost_orange": "color(var(orange) s(- 20%) l(+ 2%)",
         "bright_orange": "hsl(30, 80%, 58%)",
         // red
         "red": "hsl(3, 100%, 56%)",
@@ -19,6 +20,7 @@
         "dark_red": "hsl(10, 100%, 33%)",
         "muted_dark_red": "color(var(dark_red) s(- 78%) l(- 1%))",
         "other_muted_dark_red": "color(var(dark_red) s(- 70%) l(- 1%))",
+        "bright_muted_red": "color(var(muted_dark_red) s(+ 15%) l(+ 25%))",
         // brown
         "brown": "hsl(24, 100%, 25%)",
         "muted_brown": "color(var(brown) l(+ 6%) s(- 60%) a(0.7))",
@@ -110,6 +112,11 @@
             "name": "Preprocessor Comments",
             "scope": "string.unquoted, entity.name.section",
             "foreground": "var(unknown_grey)",
+        },
+        {
+            "name": "Macros",
+            "scope": "support.macro",
+            "foreground": "color(var(unknown_grey) l(+ 5%)",
         },
 
         // Rust Foreground - because variables etc don't get their own scope
@@ -221,6 +228,11 @@
 
         // Keywords, Punctuation
         {
+            "name": "General Keywords",
+            "scope": "keyword.",
+            "foreground": "var(almost_amber)"
+        },
+        {
             "name": "Control",
             "scope": "keyword.control",
             "foreground": "var(almost_amber)"
@@ -286,8 +298,30 @@
         // Strings
         {
             "name": "Strings",
-            "scope": "string.quoted",
+            "scope": "string, string.quoted",
             "foreground": "var(bright_red)",
+        },
+        {
+            "name": "String Escaping",
+            "scope": "constant.character.escape",
+            "foreground": "var(muted_dark_red)",
+        },
+        {
+            "name": "String Formatting",
+            "scope": "constant.other.placeholder, punctuation.section.interpolation",
+            "foreground": "var(bright_muted_red)",
+        },
+
+        // Booleans, Constants
+        {
+            "name": "Built-in Constants",
+            "scope": "constant.language",
+            "foreground": "var(almost_orange)",
+        },
+        {
+            "name": "Constants Unspecified",
+            "scope": "constant",
+            "foreground": "var(bright_amber)",
         },
 
         // JSON
@@ -318,5 +352,13 @@
             "scope": "entity.other.attribute-name",
             "foreground": "var(basically_white)"
         },
+
+        // Errors and Warnings
+        {
+            "name": "Errors",
+            "scope": "invalid, invalid.deprecated",
+            "foreground": "var(red)"
+        },
+           
     ]
 }
