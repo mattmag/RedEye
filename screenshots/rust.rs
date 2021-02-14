@@ -9,6 +9,7 @@ struct Fox {
 
 impl Fox {
     fn new(name: String) -> Fox {
+        println!("Creating a new fox named {:?}", name);
         Fox {
             is_quick: true,
             name: name,

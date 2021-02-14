@@ -31,8 +31,8 @@ public class BrownFox : Pangram
             humiliatedDogs[dog].Add(this);
         }
 
-        string dogNames = string.Join(", ", dogs.Select(a => $"{a.Name} the lazy {a.GetBreed()}"));
-        string message = "I, the quick brown fox, jumped over " + dogNames + "  :)";
+        string dogs = string.Join(", ", dogs.Select(a => $"\"{a.Name}\" the lazy {a.GetBreed()}"));
+        string message = "I, the quick brown fox, jumped over " + dogs + " :)";
 
         return message;
     }
