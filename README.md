@@ -19,7 +19,7 @@ RedEye is a cohesive color Sublime Text scheme prioritizing readability. Inspire
     For major code blocks, RedEye avoids vomiting the rainbow into your eyes, yet it doesn't resort to unhelpful monochromatic text either.  Subtle variations in the base color provide just enough contrast to distinguish between in line operations.
 
 - **Faded Comments with XML Comments Support**\
-    Comments are faint to avoid pulling focus from the code. As large comment blocks usually precede method and class definitions, their style furthers the goal of visually separating major code structures.  Also, C#'s XML comments are supported to help aid with formatting and syntax.
+    Comments are faint to avoid pulling focus from the code. As large comment blocks usually precede method and class definitions, their style furthers the goal of visually separating major code structures.  Also, C#'s XML comments are supported to help with formatting and syntax.
 
 
 ## Language Support
@@ -31,11 +31,13 @@ RedEye is a cohesive color Sublime Text scheme prioritizing readability. Inspire
 - XML - Basic Support\
     ![XML Screenshot](https://github.com/mattmag/RedEye/blob/main/screenshots/xml.png?raw=true "XML Screenshot")
 
+
 ## License and Contribution
-Attribution-NonCommercial-ShareAlike 4.0 International [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)\
+Style and contents licensed under Attribution-NonCommercial-ShareAlike 4.0 International [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)\
 Derivations should credit mattmag and link back to this repository.
 
 If you wish to help tune the scheme towards a programming language that is currently not well supported, feel free to make the changes and create a pull request.
+
 
 ## Thanks
 Shout out to the [ColorSchemeEditor](https://packagecontrol.io/packages/ColorSchemeEditor) and [ScopeHunter](https://packagecontrol.io/packages/ScopeHunter) plugins for making color scheme editing easier.
