@@ -1,1 +1,5 @@
+screenshots export-ignore
 screenshots/** export-ignore linguist-vendored
+.gitattributes export-ignore
+.gitignore export-ignore
+.github/ export-ignore
