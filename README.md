@@ -43,6 +43,18 @@ RedEye is a cohesive color Sublime Text scheme prioritizing readability. Inspire
 
     ![XML Screenshot](https://raw.githubusercontent.com/mattmag/RedEye/main/screenshots/xml.png)
 
+## Installation
+
+Method 1: Package Control (Recommended)
+1. In Sublime Text, Hit Ctrl + Shift + P to bring up the command palette
+2. Type Install Package and hit Enter
+3. Type RedEye (one word) and select it from the list
+
+Method 2: Manual Installation
+1. Get the theme either by downloading and extracting a release from the right, downloading the RedEye.sublime-color-scheme file from the source files above, or cloning this repository to your PC.
+2. In Sublime Text, go to Preferences > Browse Packages
+3. Create a RedEye sub folder at the packages location (or organize them anyway you like)
+4. Add the RedEye.sublime-color-scheme file to the sub folder
 
 ## License and Contribution
 
