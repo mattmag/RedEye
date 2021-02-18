@@ -177,6 +177,16 @@
             "scope": "storage.type.impl.rust",
             "foreground": "var(bright_purple)",
         },
+        {
+            "name": "Rust Trait Definition",
+            "scope": "storage.type.trait",
+            "foreground": "var(dark_green)",
+        },
+        {
+            "name": "Rust Trait Name",
+            "scope": "entity.name.trait",
+            "foreground": "var(bright_green)",
+        },
 
         // Methods Definitions
         {
