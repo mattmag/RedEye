@@ -144,17 +144,27 @@
             "foreground": "var(green)",
         },
 
+        // Namespaces
+        {
+            "name": "Namespace",
+            "scope": "storage.type.namespace",
+            "foreground": "var(almost_amber)",
+        },
+        {
+            "name": "Namespace",
+            "scope": "entity.name.namespace",
+            "foreground": "var(bright_amber)",
+        },
 
         // Class Definitions
         {
             "name": "Class Names",
-            "scope": "entity.name.class, entity.name.struct, entity.name.enum",
+            "scope": "entity.name.class, entity.name.struct, entity.name.enum, entity.name.interface",
             "foreground": "var(green)",
         },
-
         {
             "name": "Class Storage Type",
-            "scope": "storage.type.class, storage.type.struct, storage.type.enum",
+            "scope": "storage.type.class, storage.type.struct, storage.type.enum, storage.type.interface",
             "foreground": "var(dark_green)",
         },
         {
