@@ -17,6 +17,7 @@ RedEye is a cohesive color Sublime Text scheme prioritizing readability. Inspire
     Why can't reading code be similar to reading a nicely formatted text document? Like headers and paragraphs, we have classes and method definitions, and while we can't make use of type face and scale, we can make better use a scheme's only tool: color. In RedEye colors are used to accentuate the code's natural hierarchy.
   
     <sub>Note how easy it is to identify classes and methods in the file and the minimap</sub>
+
     ![Code Hierarchy](https://raw.githubusercontent.com/mattmag/RedEye/main/screenshots/scrolling.gif)
 
 - **Subtle Variations**
@@ -43,23 +44,27 @@ RedEye is a cohesive color Sublime Text scheme prioritizing readability. Inspire
 
     ![XML Screenshot](https://raw.githubusercontent.com/mattmag/RedEye/main/screenshots/xml.png)
 
+
 ## Installation
 
 Method 1: Package Control (Recommended)
+
 1. In Sublime Text, Hit Ctrl + Shift + P to bring up the command palette
 2. Type Install Package and hit Enter
 3. Type RedEye (one word) and select it from the list
 
+
 Method 2: Manual Installation
+
 1. Get the theme either by downloading and extracting a release from the right, downloading the RedEye.sublime-color-scheme file from the source files above, or cloning this repository to your PC.
 2. In Sublime Text, go to Preferences > Browse Packages
 3. Create a RedEye sub folder at the packages location (or organize them anyway you like)
 4. Add the RedEye.sublime-color-scheme file to the sub folder
 
+
 ## License and Contribution
 
-Style and contents licensed under Attribution-NonCommercial-ShareAlike 4.0 International [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)\
-Derivations should credit mattmag and link back to this repository.
+Style and contents licensed under Attribution-NonCommercial-ShareAlike 4.0 International [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). Derivations should credit mattmag and link back to this repository.
 
 If you wish to help tune the scheme towards a programming language that is currently not well supported, feel free to make the changes and create a pull request.
 
