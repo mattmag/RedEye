@@ -1,0 +1,10 @@
+RedEye Color Scheme 1.3.0
+=========================
+
+    Bug Fixes
+    ---------
+        - Fixed C# XML documentation comments when using the new C# syntax definition found in ST4
+
+    New Features
+    ------------
+        - Better XML syntax support and color balance
