@@ -360,16 +360,31 @@
         {
             "name": "Tag Brackets",
             "scope": "punctuation.definition.tag",
-            "foreground": "var(bright_orange)"
+            "foreground": "var(almost_orange)"
         },
         {
             "name": "Tag Name",
             "scope": "entity.name.tag.localname",
+            "foreground": "var(amber)"
+        },
+        {
+            "name": "Attribute Names",
+            "scope": "entity.other.attribute-name",
             "foreground": "var(bright_amber)"
         },
         {
-            "name": "Attributes",
-            "scope": "entity.other.attribute-name",
+            "name": "Attribute Assignment",
+            "scope": "punctuation.separator.key-value.xml",
+            "foreground": "var(almost_orange)"
+        },
+        {
+            "name": "Attribute Value",
+            "scope": "string.quoted.double.xml",
+            "foreground": "var(bright_orange)"
+        },
+        {
+            "name": "Value Text",
+            "scope": "text.xml",
             "foreground": "var(basically_white)"
         },
 
