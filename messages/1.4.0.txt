@@ -1,0 +1,10 @@
+RedEye Color Scheme 1.4.0
+=========================
+
+    Bug Fixes
+    ---------
+        - Using a more specific scope for pre processor comments
+
+    New Features
+    ------------
+        - Markdown support
