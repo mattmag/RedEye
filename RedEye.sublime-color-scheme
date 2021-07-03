@@ -12,8 +12,10 @@
         "muted_white": "color(var(basically_white) a(0.25))",
         // orange
         "orange": "hsl(25, 100%, 50%)",
-        "almost_orange": "color(var(orange) s(- 20%) l(+ 2%)",
+        "almost_orange": "color(var(orange) s(- 20%) l(+ 2%))",
+        "dim_almost_orange": "color(var(almost_orange) s(- 30%) a(0.7))",
         "bright_orange": "hsl(30, 80%, 58%)",
+        "dim_bright_orange": "color(var(bright_orange) s(- 10%) a(0.8))",
         // red
         "red": "hsl(3, 100%, 56%)",
         "bright_red": "color(var(red) s(- 10%) l(+ 10%) a(0.8)",
@@ -364,7 +366,7 @@
         },
         {
             "name": "Tag Name",
-            "scope": "entity.name.tag.localname",
+            "scope": "entity.name.tag.localname, entity.name.tag",
             "foreground": "var(amber)"
         },
         {
@@ -394,6 +396,184 @@
             "scope": "invalid, invalid.deprecated",
             "foreground": "var(red)"
         },
-           
+
+        // Markdown Headers
+        {
+            "name": "Heading Markers 1",
+            "scope": "markup.heading.1.markdown punctuation.definition.heading.begin.markdown",
+            "foreground": "var(dark_green)"
+        },
+        {
+            "name": "Markdown Heading 1 Text",
+            "scope": "markup.heading.1.markdown entity.name.section.markdown",
+            "foreground": "var(green)"
+        },
+        {
+            "name": "Heading Markers",
+            "scope": "markup.heading punctuation.definition.heading.begin.markdown",
+            "foreground": "var(bright_pink)"
+        },
+        {
+            "name": "Markdown Heading Text",
+            "scope": "markup.heading entity.name.section.markdown",
+            "foreground": "var(pink)"
+        },
+        // Markdown Font
+        {
+            "name": "Bold Punctuation",
+            "scope": "markup.bold.markdown punctuation.definition.bold.begin.markdown, markup.bold.markdown punctuation.definition.bold.end.markdown",
+            "foreground": "var(almost_amber)",
+            "font_style": "none",
+        },
+        {
+            "name": "Bold Text",
+            "scope": "markup.bold.markdown",
+            "foreground": "var(amber)",
+            "font_style": "",
+        },
+        {
+            "name": "Italic Punctuation",
+            "scope": "markup.italic.markdown punctuation.definition.italic.begin.markdown, markup.italic.markdown punctuation.definition.italic.end.markdown",
+            "foreground": "var(dim_bright_orange)",
+            "font_style": "",
+        },
+        {
+            "name": "Italic Text",
+            "scope": "markup.italic.markdown",
+            "foreground": "var(amber)",
+            "font_style": "italic",
+        },
+        {
+            "name": "Strikethrough Punctuation",
+            "scope": "markup.strikethrough.markdown-gfm punctuation.definition.strikethrough.begin.markdown, markup.strikethrough.markdown-gfm punctuation.definition.strikethrough.end.markdown",
+            "foreground": "var(muted_amber)",
+            "font_style": "",
+        },
+        {
+            "name": "Strikethrough Text",
+            "scope": "markup.strikethrough.markdown-gfm",
+            "foreground": "var(dim_almost_orange)",
+        },
+        // Markdown Lists
+        {
+            "name": "Markdown Unnumbered Bullet",
+            "scope": "markup.list.unnumbered.bullet.markdown",
+            "foreground": "var(almost_orange)"
+        },
+        {
+            "name": "Markdown Numbered Bullet",
+            "scope": "markup.list.numbered.bullet.markdown",
+            "foreground": "var(almost_orange)"
+        },
+        // Markdown Block Quote
+        {
+            "name": "Markdown Block Quote Punctuation",
+            "scope": "markup.quote.markdown punctuation.definition.blockquote.markdown",
+            "foreground": "var(bright_muted_red)",
+        },
+        {
+            "name": "Markdown Block Quote Text",
+            "scope": "markup.quote.markdown",
+            "foreground": "var(bright_red)",
+        },
+        // Markdown Code Fences
+        {
+            "name": "Markdown Code Fence",
+            "scope": "punctuation.definition.raw.code-fence.begin.markdown, punctuation.definition.raw.code-fence.end, constant.other.language-name.markdown",
+            "foreground": "var(bright_green)",
+        },
+        {
+            "name": "Markdown Language Name",
+            "scope": "constant.other.language-name.markdown",
+            "foreground": "var(dark_green)",
+        },
+        // Markdown Links
+        {
+            "name": "Markdown Link Text Brackets",
+            "scope": "punctuation.definition.link.begin.markdown, punctuation.definition.link.end.markdown",
+            "foreground": "var(almost_orange)",
+        },
+
+        {
+            "name": "Markdown Link Text",
+            "scope": "meta.link.inline.description.markdown",
+            "foreground": "var(almost_amber)",
+        },
+        {
+            "name": "Markdown Link URL Brackets",
+            "scope": "punctuation.definition.metadata.begin.markdown, punctuation.definition.metadata.end.markdown",
+            "foreground": "var(other_muted_dark_red)",
+        },
+        {
+            "name": "Markdown Link URL",
+            "scope": "markup.underline.link.markdown",
+            "foreground": "var(bright_muted_red)",
+        },
+        // Markdown Images
+        {
+            "name": "Markdown Image Text Brackets",
+            "scope": "punctuation.definition.image.begin.markdown, punctuation.definition.image.end.markdown",
+            "foreground": "var(almost_orange)",
+        },
+
+        {
+            "name": "Markdown Image Description",
+            "scope": "meta.image.inline.description.markdown",
+            "foreground": "var(almost_amber)",
+        },
+        {
+            "name": "Markdown Image URL Brackets",
+            "scope": "punctuation.definition.metadata.begin.markdown, punctuation.definition.metadata.end.markdown",
+            "foreground": "var(other_muted_dark_red)",
+        },
+        {
+            "name": "Markdown Image URL",
+            "scope": "markup.underline.link.image.markdown",
+            "foreground": "var(bright_muted_red)",
+        },
+        // Markdown References
+        {
+            "name": "Markdown Reference Brackets",
+            "scope": "punctuation.definition.constant.begin.markdown, punctuation.definition.constant.end.markdown",
+            "foreground": "var(bright_blue)",
+        },
+        {
+            "name": "Markdown Image Reference ID",
+            "scope": "entity.name.reference.link.markdown",
+            "foreground": "var(bright_blue)",
+        },
+        {
+            "name": "Markdown Image Reference",
+            "scope": "meta.image.reference.markdown punctuation.definition.constant.begin.markdown, meta.image.reference.markdown punctuation.definition.constant.end.markdown",
+            "foreground": "var(blue)",
+        },
+        {
+            "name": "Markdown Image Reference ID",
+            "scope": "meta.image.reference.markdown constant.other.reference.link.markdown",
+            "foreground": "var(blue)",
+        },
+        // Markdown tables
+        {
+            "name": "Markdown Table Header",
+            "scope": "meta.table.header.markdown-gfm",
+            "foreground": "var(bright_purple)",
+        },
+        {
+            "name": "Markdown Table Borders",
+            "scope": "punctuation.section.table-header.markdown, punctuation.separator.table-cell.markdown",
+            "foreground": "color(var(bright_purple) l(- 20%))",
+        },
+        {
+            "name": "Markdown Table Cell Alignment",
+            "scope": "punctuation.definition.table-cell-alignment.markdown",
+            "foreground": "var(bright_purple)",
+        },
+        // Markdown Horizontal Rule
+        {
+            "name": "Markdown Horizontal Rule",
+            "scope": "punctuation.definition.thematic-break.markdown",
+            "foreground": "var(bright_green)"
+        }
     ]
 }
+
