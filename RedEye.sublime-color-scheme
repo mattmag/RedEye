@@ -60,7 +60,7 @@
         "caret": "var(bright_blue)",
         "selection": "var(dark_purple)",
         "selection_border": "var(muted_pink)",
-        "line_highlight": "color(var(super_dark_brown) l(+ 1.5%))",
+        "line_highlight": "color(var(super_dark_brown) l(+ 2.5%))",
         "highlight": "color(var(unknown_grey) a(1))",
         "find_highlight": "color(var(unknown_grey) a(1))",
         
