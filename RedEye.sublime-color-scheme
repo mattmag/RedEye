@@ -112,7 +112,7 @@
         },
         {
             "name": "Preprocessor Comments",
-            "scope": "string.unquoted, entity.name.section",
+            "scope": "meta.preprocessor string.unquoted, meta.preprocessor entity.name.section",
             "foreground": "var(unknown_grey)",
         },
         {
